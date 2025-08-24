@@ -1,0 +1,13 @@
+
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "127.0.0.1:7335:6333"
+      - "127.0.0.1:7336:6334"
+    environment:
+      QDRANT__STORAGE__STRICT_MODE: "true"
+    volumes:
+      - qdrant_storage:/qdrant/storage
+volumes:
+  qdrant_storage:

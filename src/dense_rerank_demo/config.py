@@ -1,0 +1,17 @@
+
+import os
+from dotenv import load_dotenv; load_dotenv()
+QDRANT_URL=os.getenv("QDRANT_URL","http://localhost:7335")
+QDRANT_API_KEY=os.getenv("QDRANT_API_KEY","")
+COLLECTION=os.getenv("COLLECTION","dense_rerank_demo")
+EMB_MODEL=os.getenv("EMB_MODEL","sentence-transformers/all-MiniLM-L6-v2")
+SPARSE_MODEL=os.getenv("SPARSE_MODEL","Qdrant/minicoil-v1")
+COLBERT_CKPT=os.getenv("COLBERT_CKPT","colbert-ir/colbertv2.0")
+TOPK_RECALL=int(os.getenv("TOPK_RECALL","100"))
+TOPK_SHOW=int(os.getenv("TOPK_SHOW","10"))
+BATCH_SIZE=int(os.getenv("BATCH_SIZE","256"))
+DATA_DIR=os.getenv("DATA_DIR","./datasets")
+DATASET=os.getenv("DATASET","scifact")
+EVAL_LIMIT=int(os.getenv("EVAL_LIMIT","50"))
+MAX_DOCS=int(os.getenv("MAX_DOCS","5100"))
+MAX_CHARS=int(os.getenv("MAX_CHARS","0"))

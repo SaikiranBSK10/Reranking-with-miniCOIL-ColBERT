@@ -1,0 +1,9 @@
+qdrant-client[fastembed]>=1.9.1
+fastembed>=0.7.0
+sentence-transformers>=3.0.0
+torch>=2.1
+transformers>=4.41.0
+beir==2.0.0
+tqdm
+numpy
+python-dotenv
